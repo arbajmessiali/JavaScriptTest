@@ -9,19 +9,19 @@ var images = [];
 images.length = 4;
 
 //fill array with images
-for(var i=1; i<=images.length;i++)
+for(var i=0; i<images.length;i++)
 {
     images[i] = new Image();
-    images[i].src = 'Ball_'+ i.toString() +'.png';
+    images[i].src = 'Ball_'+ (i+1).toString() +'.png';
 }
 
 //draw image on canvas
-var i=1;
+var i=0;
 setInterval(function(){
     i++;
     if(i>4)
     {
-        i=1;
+        i=0;
     }
     ctx.drawImage(images[i],100,100,100,100);
 },100)
