@@ -24,4 +24,4 @@ setInterval(function(){
         i=0;
     }
     ctx.drawImage(images[i],100,100,100,100);
-},100)
+},500)
