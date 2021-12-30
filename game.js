@@ -11,7 +11,7 @@ images.length = 4;
 //fill array with images
 for(var i=1; i<=images.length;i++)
 {
-    images[i] = new Image;
+    images[i] = new Image();
     images[i].src = 'Ball_'+ i.toString() +'.png';
 }
 
