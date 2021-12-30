@@ -12,7 +12,7 @@ images.length = 4;
 for(var i=1; i<=images.length;i++)
 {
     images[i] = new Image;
-    images[i].src = 'Ball_'+i.toString()+'.png';
+    images[i].src = 'src/Ball_'+i.toString()+'.png';
 }
 
 //draw image on canvas
