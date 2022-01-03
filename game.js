@@ -23,5 +23,6 @@ setInterval(function(){
     {
         i=0;
     }
+	ctx.clearRect(0,0,canvas.width, canvas.height);
     ctx.drawImage(images[i],100,100,100,100);
-},500)
+},200)
