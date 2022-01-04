@@ -47,10 +47,14 @@ function drawSprite(img, sX, sY, sW, sH, dX, dY, dW, dH) {
 function animate() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	drawSprite(images.player, playerWidth * playerFrameX, playerHeight * playerFrameY, playerWidth, playerHeight, playerX, playerY, playerWidth, playerHeight);
+	if(playerFrameX < 9) 
+		playerFrameX++;
+	else
+		playerFrameX = 1;
 }
 
 //animation
-window.onload = setInterval(animate, 1000/30);
+window.onload = setInterval(animate, 1000/20);
 
 //fix window resize
 window.addEventListener('resize', function(){
