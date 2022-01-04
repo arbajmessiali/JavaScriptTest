@@ -1,8 +1,8 @@
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth - 100;
+canvas.height = window.innerHeight - 100;
 
 //create empty array
 var images = [];
@@ -28,8 +28,12 @@ var imageY = 0;*/
 
 //Keyboard Input
 document.addEventListener('keydown', function(event) {
-	if (event.key === 'd')
-		playerX = playerX + playerSpeed;
+	if (event.key === 'd'){
+		if(playerX < canvas.width + playerWidth)
+			playerX = playerX + playerSpeed;
+		else
+			playerX = 0 - playerWidth;
+		}
 })
 
 //draw function
