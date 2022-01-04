@@ -15,6 +15,22 @@ for(var i=0; i<images.length;i++)
     images[i].src = 'Ball_'+ (i+1).toString() +'.png';
 }
 
+//Image initial position
+var imageX = 0;
+var imageY = 0;
+
+//Keyboard Input
+document.addEventListener('keydown', function (event) {
+	if(event.key === 'd')
+		imageX = imageX + 5;
+	if(event.key === 's')
+		imageY = imageY + 5;
+	if(event.key === 'a')
+		imageY = imageX - 5;
+	if(event.key === 'w')
+		imageY = imageY - 5;
+})
+
 //draw image on canvas
 var i=0;
 setInterval(function(){
@@ -24,5 +40,5 @@ setInterval(function(){
         i=0;
     }
 	ctx.clearRect(0,0,canvas.width, canvas.height);
-    ctx.drawImage(images[i],100,100,100,100);
-},200)
+    ctx.drawImage(images[i], imageX, imageY, 100, 100);
+},100)
