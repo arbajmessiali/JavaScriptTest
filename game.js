@@ -26,17 +26,11 @@ for (var i = 0; i < images.length; i++) {
 var imageX = 0;
 var imageY = 0;*/
 
-/*//Keyboard Input
+//Keyboard Input
 document.addEventListener('keydown', function(event) {
 	if (event.key === 'd')
-		imageX = imageX + 5;
-	if (event.key === 's')
-		imageY = imageY + 5;
-	if (event.key === 'a')
-		imageY = imageX - 5;
-	if (event.key === 'w')
-		imageY = imageY - 5;
-})*/
+		playerX = playerX + playerSpeed;
+})
 
 //draw function
 function drawSprite(img, sX, sY, sW, sH, dX, dY, dW, dH) {
